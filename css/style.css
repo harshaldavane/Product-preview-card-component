@@ -1,0 +1,265 @@
+    /* google fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+    :root{
+        /* COLor */
+        --primary-color:#5cb997;
+        --primary-color-two:#f2ebe3;
+        --Dark-color-blue:#1c232b;
+        --Dark-color-gray:#6c7289;
+        --white-color:#ffffff;
+        /* font size */
+        --Font-montse:font-family:'Montserrat', sans-serif;
+        --Font-fraunses:'Fraunces', serif;
+        --Font-roboto:'Roboto', sans-serif;
+        /* fontsize */
+        --Font-size-p:14px;
+
+        /* font-weigth */
+        --Font-weights-semibold:500;
+        --Font-weight-bold:700px
+
+        /* visual size in piexel resolution*/
+        --Desktop-r-size:1440px;
+        --Mobile-r-size:776px;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+
+    body{
+    background-color: var(--primary-color-two);
+    }
+
+    #main{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        width: 650px;
+        margin: auto;
+        background-color: var(--white-color);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        
+    }
+
+    .card .card-image{
+        
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .card .card-image .desktop-img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card .card-image .mobile-img{
+        display: none;
+    }
+    .card .card-content{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.1rem;
+    }
+
+    .card .card-content .brand{
+        letter-spacing: 7px;
+        text-align: left;
+        padding-left: 2rem;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-family: var(--Font-roboto);
+        color: var(--Dark-color-gray);
+        font-size: 14px;
+    }
+
+    .card .card-content h1{
+        text-transform: capitalize;
+        line-height: 2.2rem;
+        padding-left: 2rem;
+        text-align: left;
+        font-family: var(--Font-fraunses);
+        font-weight: var(--Font-weight-bold);
+    }
+
+    .card .card-content .brand-description{
+        
+        color:var(--Dark-color-gray);
+        font-family: sans-serif;
+        line-height: 1.5rem;
+        padding-left: 2rem;
+        text-align: left;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        color: var(--primary-color);
+        margin-top: 1rem;
+    }
+
+
+    .price .price-label{
+        padding-left: 2rem;
+        text-align: left;
+        font-weight: var(--Font-weight-bold);
+        font-family: var(--Font-fraunses);
+        font-size: 2rem;
+    }
+
+    .price .price-label-two{
+        padding-left:40px;
+        font-family: 'Roboto', sans-serif;
+        color: var(--Dark-color-gray);
+        
+    }
+
+    .button-cart{
+        margin-top: 1rem;
+        margin-left:2rem;
+        margin-right: 2rem;
+        background-color: #5cb997;
+        color: var(--white-color);
+        padding: 15px 25px;
+        border-radius: 10px;
+        text-transform: capitalize;
+        font-family: sans-serif;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .button-cart img{
+        margin-right: 1rem;
+        margin-top: 2px;
+    }
+
+
+
+    /* media queries */
+
+    @media(max-width: 768px) {
+        #main{
+            margin: 30px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card{
+            width: 350px;
+            margin: auto;
+            background-color: var(--white-color);
+            border-radius: 10px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10;
+            
+            
+        }
+        
+        .card .card-image{
+            
+            width: 100% !important;
+            border-radius: 10px;
+
+        }
+
+        .card .card-image .desktop-img{
+            display: none;
+        }
+        .card .card-image .mobile-img{
+            display:block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius:10px 10px 0 0;
+            
+        }
+
+        .card .card-content{
+            width: 100%;
+        }
+
+    
+
+        .button-cart{
+            margin: 1rem 1rem;
+            
+            background-color: #0c3526;
+            color: var(--white-color);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-transform: capitalize;
+            font-family: sans-serif;
+            font-weight: 900;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .button-cart img{
+            margin-right: 1rem;
+            margin-top: 2px;
+        }
+
+        .card .card-content{
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.8rem;
+        }
+    
+
+        .card .card-content .brand{
+            font-size: 12px;
+        }
+
+        .card .card-content h1{
+            text-transform: capitalize;
+            font-size: 1.5em;
+            line-height: 1.8rem;
+            padding-left: 2rem;
+            text-align: left;
+            font-family: var(--Font-fraunses);
+            font-weight: var(--Font-weight-bold);
+            
+        }
+
+        .card .card-content .brand-description{
+        
+            color:var(--Dark-color-gray);
+            font-family: sans-serif;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            padding-left: 2rem;
+            text-align: left;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+
+    }
